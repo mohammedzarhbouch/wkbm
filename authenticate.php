@@ -8,7 +8,6 @@ if ( !isset($_POST['email'], $_POST['password']) ) {
 	exit('Please fill both the username and password fields!');
 }
 
-
 if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?')) {
 	
 	$statement->bind_param('s', $_POST['email']);
@@ -24,30 +23,19 @@ if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?'))
 		$bool = password_verify($password_text, $password);
 
 		if ($bool === true) {
-			echo "inloggen gelukt";
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['email'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-            var_dump($_SESSION);
-			header('Location: google.com');
+			header('Location: index.html');
 		} else {
-			
-			echo 'Incorrect username and/or password!';
-			sleep(5);
-			header(("Location: youtube.com"));
+			header(("Location: test.html"));
 		}
 	} else {
-		
-		echo 'Incorrect username and/or password!';
-		sleep(5);
-		header(("Location: apple.com"));
+		header(("Location: google.com"));
 	}
 
 	$statement->close();
-
-	
-	
 	
 }
 
