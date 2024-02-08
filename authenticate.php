@@ -24,23 +24,24 @@ if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?'))
 		$bool = password_verify($password_text, $password);
 
 		if ($bool === true) {
-			//echo "inloggen gelukt";
+			echo "inloggen gelukt";
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['email'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: test.html');
+            var_dump($_SESSION);
+			header('Location: google.com');
 		} else {
 			
-			//echo 'Incorrect username and/or password!';
-			//sleep(5);
-			header(("Location: index.html"));
+			echo 'Incorrect username and/or password!';
+			sleep(5);
+			header(("Location: youtube.com"));
 		}
 	} else {
 		
-		//echo 'Incorrect username and/or password!';
-		//sleep(5);
-		header(("Location: index.html"));
+		echo 'Incorrect username and/or password!';
+		sleep(5);
+		header(("Location: apple.com"));
 	}
 
 	$statement->close();
