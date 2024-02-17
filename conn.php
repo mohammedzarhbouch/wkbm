@@ -1,8 +1,8 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseUser = 'admin';
-$databasePassword = 'root';
+$databaseUser = 'mohammed';
+$databasePassword = 'mohammed';
 $databaseName = 'wkbm_finance';
 
 $con = mysqli_connect($databaseHost, $databaseUser , $databasePassword , $databaseName);
@@ -15,4 +15,3 @@ if ( mysqli_connect_error() ) {
 
 
 
-?>

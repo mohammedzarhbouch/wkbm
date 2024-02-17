@@ -17,30 +17,27 @@ if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?'))
 	if ($statement->num_rows > 0) {
 		$statement->bind_result($id, $password);
 		$statement->fetch();
-		
-		$password_text = $_POST['password'];
 
-		$bool = password_verify($password_text, $password);
+		if ($_POST['password'] === $password) {
+			$password_text = $_POST['password'];
 
-		if ($bool === true) {
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
-			$_SESSION['email'] = $_POST['email'];
+			$_SESSION['name'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: index.html');
+			header('Location: home.php');
 		} else {
-			header(("Location: test.html"));
+			// Incorrect password
+			echo 'Incorrect username and/or password!';
 		}
 	} else {
-		header(("Location: google.com"));
+		// Incorrect username
+		echo 'Incorrect username and/or password!';
 	}
 
-	$statement->close();
-	
+
+
+
+
+$statement->close();
 }
-
-
-
-
-
-?>
