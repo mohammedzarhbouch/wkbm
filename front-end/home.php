@@ -15,6 +15,6 @@ if (!isset($_SESSION['loggedin'])) {
     <title>Document</title>
 </head>
 <body>
-    <a href="logout.php">Logout</a>
+    <a href="../back-end/logout.php">Logout</a>
 </body>
 </html>

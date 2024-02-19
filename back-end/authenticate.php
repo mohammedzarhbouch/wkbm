@@ -25,7 +25,7 @@ if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?'))
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: home.php');
+			header('Location: ../front-end/home.php');
 		} else {
 			// Incorrect password
 			echo 'Incorrect username and/or password!';
