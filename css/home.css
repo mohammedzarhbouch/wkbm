@@ -35,13 +35,11 @@ section {
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 0.9em;
-    min-width: 600px;
+    min-width: 700px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(30px);
-    /* margin-right: 50%; */
-
 }
 
 .content-table thead tr {
@@ -173,4 +171,69 @@ button {
 
 .menu__item:hover {
     background-color: #CFD8DC;
+}
+
+
+
+/* Stijl voor de scrollbar */
+::-webkit-scrollbar {
+    width: 20px; /* Breedte van de scrollbar */
+}
+
+/* Track - het gebied waar de scrollbar zich bevindt */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Kleur van de track */
+    border-radius: 5px;
+}
+
+/* Gripper - het handvat van de scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Kleur van de gripper */
+    border-radius: 5px; /* Afronding van de randen */
+}
+
+/* OnHover - stijl veranderingen wanneer de gebruiker de scrollbar aanraakt */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Kleur van de gripper bij hover */
+}
+
+/* Optioneel - stijl voor de hoeken van de scrollbar */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Kleur van de hoeken */
+}
+
+/* Optioneel - stijl voor de knoppen van de scrollbar (pijlen omhoog/omlaag) */
+::-webkit-scrollbar-button {
+    display: none; /* Knoppen verbergen */
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(30px);
+    /* background-color: grey; */
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.popup p {
+    color: white;
+}
+.balance {
+    position: fixed;
+    margin-bottom: 30%;
+    margin-right: 75%;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 30px;
 }
