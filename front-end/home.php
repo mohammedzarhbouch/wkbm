@@ -17,17 +17,17 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
     <section>
-    <div class="hamburger-menu">
-
-    <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-            <span></span>
-        </label>
-
-        <?php require_once("../mainmenu.php"); ?>
-    </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <?php require_once("../mainmenu.php"); ?>
+        </div>
 
         <div class="header">WKBM FINANCE</div>
+
+            <div class="balance">0.00</div>
 
         <div style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
             <table class="content-table">
@@ -89,7 +89,37 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
         </div>
 
-        <button type="button">Overboeken</button>
+        <button type="button" id="openPopup">Overboeken</button>
+
+        <div class="popup">
+            <p>Voer hier iets in:</p>
+            <input type="text" id="userInput">
+            <button type="button" id="submit">Verzenden</button>
+            <button type="button" id="closePopup">Sluiten</button>
+        </div>
+
+
+        <script>
+            // JavaScript om de pop-up te openen en te sluiten
+
+            // Haal de knop en het pop-upvenster op
+            var openButton = document.getElementById('openPopup');
+            var popup = document.querySelector('.popup');
+            var closeButton = document.getElementById('closePopup');
+
+            // Voeg een event listener toe aan de knop voor klikgebeurtenissen
+            openButton.addEventListener('click', function() {
+                // Toon het pop-upvenster wanneer er op de knop wordt geklikt
+                popup.style.display = 'block';
+            });
+
+            // Voeg een event listener toe aan de knop om het pop-upvenster te sluiten
+            closeButton.addEventListener('click', function() {
+                // Verberg het pop-upvenster wanneer er op de knop wordt geklikt
+                popup.style.display = 'none';
+            });
+        </script>
+
     </section>
 
 </body>
