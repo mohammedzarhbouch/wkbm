@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reg.css">
+    <title>WKBM registratie</title>
+</head>
+<body>
+    
+    <section>
+        <div class="header">WKBM FINANCE</div>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="../back-end/reg.php" method="POST">
+                    <h2>Login</h2>
+                    <!-- voornaam -->
+                    <div class="inputbox">
+                    <ion-icon name="id-card-outline"></ion-icon>
+                        <input type="text" required name="voornaam">
+                        <label for="">Voornaam</label>
+                    </div>
+                    <!-- achternaam -->
+                    <div class="inputbox">
+                    <ion-icon name="id-card-outline"></ion-icon>
+                        <input type="text" required name="achternaam">
+                        <label for="">Achternaam</label>
+                    </div>
+                    <!-- e-mail -->
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required name="email">
+                        <label for="">Email</label>
+                    </div>
+                    <!-- wachtwoord -->
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required name="wachtwoord">
+                        <label for="">Wachtwoord</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required name="wachtwoord2">
+                        <label for="">Herhaal Wachtwoord</label>
+                    </div>
+                    <button>Log in</button>
+                    <div class="register">
+                        <p>Al een account? <a href="index.html">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        function validatePasswords() {
+          var password = document.getElementsByName("wachtwoord")[0].value;
+          var password2 = document.getElementsByName("wachtwoord2")[0].value;
+        
+          if (password !== password2) {
+            alert("De wachtwoorden komen niet overeen.");
+            return false; // Voorkomt dat het formulier wordt verzonden
+          }
+        
+          // Voeg hier eventueel extra validatie toe, zoals wachtwoordsterktecontroles
+        
+          return true; // Staat het formulier toe om verzonden te worden
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

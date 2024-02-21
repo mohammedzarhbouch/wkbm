@@ -3,12 +3,12 @@ session_start();
 
 include('conn.php');
 
-if ( !isset($_POST['email'], $_POST['password']) ) {
+if ( !isset($_POST['email'], $_POST['wachtwoord']) ) {
 	
 	exit('Please fill both the username and password fields!');
 }
 
-if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?')) {
+if ($statement = $con->prepare('SELECT id, wachtwoord FROM user WHERE email = ?')) {
 	
 	$statement->bind_param('s', $_POST['email']);
 	$statement->execute();
@@ -18,8 +18,8 @@ if ($statement = $con->prepare('SELECT id, password FROM user WHERE email = ?'))
 		$statement->bind_result($id, $password);
 		$statement->fetch();
 
-		if ($_POST['password'] === $password) {
-			$password_text = $_POST['password'];
+		if ($_POST['wachtwoord'] === $password) {
+			$password_text = $_POST['wachtwoord'];
 
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
