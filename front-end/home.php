@@ -26,7 +26,7 @@ if (!isset($_SESSION['loggedin'])) {
 
         <?php require_once("../mainmenu.php"); ?>
     </div>
-    
+
         <div class="header">WKBM FINANCE</div>
 
         <div style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="active-row">
                         <td>1 feb</td>
                         <td>Jumbo</td>
                         <td>-9,05</td>
