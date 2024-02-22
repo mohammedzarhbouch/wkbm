@@ -37,7 +37,7 @@ if (!isset($_SESSION['loggedin'])) {
 
         <form>
             <label for="fname">Voornaam:</label><br>
-            <input type="text" id="fname" name="fname"><br><br>
+            <div id="voornaam">test<br><br></div>
             <label for="lname">Achternaam:</label><br>
             <input type="text" id="lname" name="lname"><br><br>
             <label for="lname">E-Mail:</label><br>
