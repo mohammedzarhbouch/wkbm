@@ -59,20 +59,38 @@ section{
     top: 30%;
     width: 33%;
     height: 12%;
-    color: white;
-    background-color: #0e342057;
-    border-radius: 15%
+    color: #fff;
+    background: transparent;
+    border: 2px solid #009879;
+    border-radius: 25px;
 }
+
+/* button {
+    margin-left: 30%;
+    margin-top: 35%;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009879;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+} */
+
 #button2{
     position: relative;
     bottom: -10%;
     width: 53%;
     height: 13%;
     color: white;
-    background-color: #0e342057;
+    background: transparent;
+    border: 2px solid #009879;
     margin-top: 30%;
     padding: 20px;
-    border-radius: 15%
+    border-radius: 25px;
 }
 #button3{
     position: relative;
@@ -80,10 +98,11 @@ section{
     left: 25%;
     width: 25%;
     height: 8%;
-    color: white;
-    background-color: #0e342057;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #009879;
     margin-top: 30%;
-    border-radius: 15%
+    border-radius: 25px;
 }
 
 #menu__toggle {
@@ -168,3 +187,14 @@ section{
 .menu__item:hover {
     background-color: #CFD8DC;
 }
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: .5; 
+  }

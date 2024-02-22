@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="header">WKBM FINANCE</div>
 
-            <div class="balance">0.00</div>
+            <div class="balance">Balans 0,00</div>
 
         <div style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
             <table class="content-table">
@@ -92,8 +92,11 @@ if (!isset($_SESSION['loggedin'])) {
         <button type="button" id="openPopup">Overboeken</button>
 
         <div class="popup">
-            <p>Voer hier iets in:</p>
+            <p>Bedrag:</p>
             <input type="text" id="userInput">
+            <p>Naam ontvanger:</p>
+            <input type="text" id="userInput">
+            
             <button type="button" id="submit">Verzenden</button>
             <button type="button" id="closePopup">Sluiten</button>
         </div>
@@ -121,6 +124,10 @@ if (!isset($_SESSION['loggedin'])) {
         </script>
 
     </section>
+
+<footer>
+    ©2024 WKBM Finance. Alle rechten voorbehouden.
+</footer>
 
 </body>
 </html>
