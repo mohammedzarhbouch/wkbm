@@ -7,9 +7,9 @@
 
 .header {
     position: absolute;
-    top: 40px; /* Adjust the top value as needed */
-    left: 40px; /* Adjust the left value as needed */
-    font-size: 2em; /* Adjust the font size as needed */
+    top: 40px;
+    left: 40px;
+    font-size: 2em;
     font-style: italic;
     color: #fff;
 }
