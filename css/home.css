@@ -70,7 +70,7 @@ section {
 
 button {
     margin-left: 30%;
-    margin-top: 35%;
+    margin-top: 15%;
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -204,22 +204,9 @@ button {
     display: none; /* Knoppen verbergen */
 }
 
-.popup {
-    width: 30%;
-    height: 25%;
-    position: fixed;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(30px);
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 20px;
-}
 
-.popup p {
-    color: white;
-}
+
+
 
 .balance {
     z-index: 1;
@@ -232,6 +219,51 @@ button {
     border: 2px solid #fff;
     border-radius: 5px;
     font-size: 30px;
+    
+}
+
+#popup {
+    width: 30%;
+    height: 25%;
+    background-color: transparent;
+    border: white 2px solid;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+    margin-left: 40%;
+    margin-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#bedrag {
+    color: white;
+}
+
+#bedragInput {
+    width: 30%;
+    text-align: center;
+}
+
+#rekeningNummer {
+    color: white;
+}
+
+#rekeningNummerInput {
+    width: 30%;
+    text-align: center;
+}
+
+#verzendKnop {
+    background-color: transparent;
+    width: 30%;
+    padding: 2px;
+    backdrop-filter: blur(20px);
 }
 
 footer {

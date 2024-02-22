@@ -89,45 +89,24 @@ if (!isset($_SESSION['loggedin'])) {
             </table>
         </div>
 
+        <div id="popup">
+            <div id="bedrag"> Bedrag</div>
+            <input id="bedragInput" type="number">
+
+            <div id="rekeningNummer" >Rekening nummer</div>
+            <input id="rekeningNummerInput" type="text">
+            <button id="verzendKnop">Verzenden</button>
+        </div>
         <button type="button" id="openPopup">Overboeken</button>
 
-        <div class="popup">
-            <p>Bedrag:</p>
-            <input type="text" id="userInput">
-            <p>Naam ontvanger:</p>
-            <input type="text" id="userInput">
-            
-            <button type="button" id="submit">Verzenden</button>
-            <button type="button" id="closePopup">Sluiten</button>
-        </div>
 
-
-        <script>
-            // JavaScript om de pop-up te openen en te sluiten
-
-            // Haal de knop en het pop-upvenster op
-            var openButton = document.getElementById('openPopup');
-            var popup = document.querySelector('.popup');
-            var closeButton = document.getElementById('closePopup');
-
-            // Voeg een event listener toe aan de knop voor klikgebeurtenissen
-            openButton.addEventListener('click', function() {
-                // Toon het pop-upvenster wanneer er op de knop wordt geklikt
-                popup.style.display = 'block';
-            });
-
-            // Voeg een event listener toe aan de knop om het pop-upvenster te sluiten
-            closeButton.addEventListener('click', function() {
-                // Verberg het pop-upvenster wanneer er op de knop wordt geklikt
-                popup.style.display = 'none';
-            });
-        </script>
 
     </section>
 
 <footer>
     ©2024 WKBM Finance. Alle rechten voorbehouden.
 </footer>
+<script src="home.js"></script>
 
 </body>
 </html>
