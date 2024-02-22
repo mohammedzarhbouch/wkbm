@@ -27,6 +27,8 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="header">WKBM FINANCE</div>
 
+        <div class="gebruiker">Wadih Ibrahim</div>
+
             <div class="balance">Balans 0,00</div>
 
         <div id="overzicht">

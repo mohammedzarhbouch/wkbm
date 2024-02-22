@@ -20,6 +20,14 @@
     font-style: italic;
     color: #fff;
 }
+
+.gebruiker {
+    position: absolute;
+    top: 40px;
+    font-size: 2em;
+    color: #fff;
+}
+
 section {
     display: flex;
     justify-content: center;
