@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profiel.css">
-    <title>Rekeningoverzicht</title>
+    <title>Profiel</title>
 </head>
 <body>
     <section>
@@ -29,6 +29,10 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="header">WKBM FINANCE</div>
 
+        <div class="profile-picture">
+            <img src="../img/blank-profile-picture-973460_640.webp" alt="Profielfoto" id="profile-img">
+            <input type="file" accept="image/*" onchange="previewImage(event)">
+          </div>
     <div id="formBox">
 
         <form>
