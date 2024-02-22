@@ -50,6 +50,9 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
         
     </section>
+    <footer>
+    ©2024 WKBM Finance. Alle rechten voorbehouden.
+</footer>
 
 </body>
 </html>
