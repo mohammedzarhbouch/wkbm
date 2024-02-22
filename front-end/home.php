@@ -1,10 +1,27 @@
 <?php
 session_start();
+require_once("../back-end/conn.php");
 
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html'); // Redirect to the login page if not logged in
     exit();
 }
+
+$query = "SELECT balance FROM user_balance WHERE id = ?";
+$stmt = $con->prepare($query);
+
+$userID = (int)$_SESSION["id"];
+
+$stmt->bind_param("i", $userID);
+
+$stmt->execute();
+$stmt->bind_result($balance);
+$stmt->fetch();
+$stmt->close();
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +46,7 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="gebruiker">Wadih Ibrahim</div>
 
-            <div class="balance">Balans 0,00</div>
+            <div class="balance">Balans €<?php echo $balance  ?> </div>
 
         <div id="overzicht">
             <table class="content-table">
