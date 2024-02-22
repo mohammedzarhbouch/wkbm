@@ -35,7 +35,7 @@ section {
     border-collapse: collapse;
     font-size: 1em;
     min-width: 700px;
-    border-radius: 20px;
+    border-radius: 20px 20px 20px 0;
     backdrop-filter: blur(30px);
 }
 
@@ -175,18 +175,21 @@ button {
 /* Stijl voor de scrollbar */
 ::-webkit-scrollbar {
     width: 20px; /* Breedte van de scrollbar */
+    
 }
 
 /* Track - het gebied waar de scrollbar zich bevindt */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Kleur van de track */
-    border-radius: 5px;
+   
+    backdrop-filter: blur(20px);
+    /* border-radius: 20px; */
+    
 }
 
 /* Gripper - het handvat van de scrollbar */
 ::-webkit-scrollbar-thumb {
     background: #888; /* Kleur van de gripper */
-    border-radius: 5px; /* Afronding van de randen */
+    border-radius: 0px 20px 20px 0px; 
 }
 
 /* OnHover - stijl veranderingen wanneer de gebruiker de scrollbar aanraakt */
@@ -266,6 +269,14 @@ button {
     backdrop-filter: blur(20px);
 }
 
+#overzicht{
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 20px;
+    border: 2px solid white;
+
+}
 footer {
     background-color: #000;
     color: #fff;

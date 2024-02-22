@@ -29,12 +29,12 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div class="balance">Balans 0,00</div>
 
-        <div style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
+        <div id="overzicht">
             <table class="content-table">
                 <thead>
                     <tr>
                         <th>Datum</th>
-                        <th>Locatie</th>
+                        <th>Naam</th>
                         <th>Uitgaven</th>
                     </tr>
                 </thead>
@@ -54,36 +54,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <td>MyTicket</td>
                         <td>-555,67</td>
                     </tr>
-                    <tr class="active-row">
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
-                    <tr>
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
-                    <tr>
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
-                    <tr>
-                        <td>22 feb</td>
-                        <td>Gymshark</td>
-                        <td>-49,95</td>
-                    </tr>
+                   
                     <!-- Additional rows can be added here -->
                 </tbody>
             </table>
