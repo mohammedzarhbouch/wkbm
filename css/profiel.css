@@ -153,6 +153,13 @@ form {
     opacity: 0;
     cursor: pointer;
 }
+#textProfielFoto{
+    position: relative;
+    bottom: -145px;
+    right: 30%;
+    color: white;
+    z-index: 0;
+}
 footer {
     background-color: #000;
     color: #fff;

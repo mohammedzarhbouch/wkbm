@@ -33,6 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
             <img src="../img/blank-profile-picture-973460_640.webp" alt="Profielfoto" id="profile-img">
             <input type="file" accept="image/*" onchange="previewImage(event)">
           </div>
+          <div id="textProfielFoto"><h3>Brian Arrammach<h3></div>
     <div id="formBox">
 
         <form>
