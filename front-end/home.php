@@ -45,7 +45,7 @@ $stmt->close();
     <link rel="stylesheet" href="../css/home.css">
     <title>Rekeningoverzicht</title>
 </head>
-<body>
+<body>  
     <section>
         <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />

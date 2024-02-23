@@ -206,16 +206,15 @@ section {
 
 .balance {
     z-index: 1;
-    position: absolute;
-    margin-bottom: 600px;
     
+  
+    margin-bottom: 30%;
     padding: 10px;
     backdrop-filter: blur(20px);
     color: white;
     border: 2px solid #fff;
     border-radius: 5px;
     font-size: 30px;
-    
 }
 
 #popup {
@@ -271,7 +270,7 @@ section {
 }
 
 #overzicht{
-    max-height: 400px;
+    max-height: 48%;
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 20px;
@@ -282,8 +281,10 @@ section {
 
 }
 
+
+
 #openPopup{
-    left: 10%;
+ 
     margin-top: 30%;
     width: 200px;
     padding: 15px 0;
@@ -295,6 +296,7 @@ section {
     color: #fff;
     cursor: pointer;
     overflow: hidden;
+    position: absolute;
     
 }
 
