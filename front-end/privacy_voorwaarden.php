@@ -33,7 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
         Wij respecteren jouw privacy. Verzamelde gegevens worden veilig bewaard, 
         niet gedeeld zonder toestemming, en dienen alleen voor de verbetering van onze diensten.
         <br><br> Algemene Voorwaarden: Door onze site te gebruiken, ga je akkoord met de voorwaarden. 
-        Houd je accountgegevens veilig, gebruik de site verantwoord, en respecteer ons auteursrecht.
+        Houd je accountgegevens veilig, gebruik de site verantwoord, en <a href="../back-end/test.php"> respecteer</a> ons auteursrecht.
         Wijzigingen kunnen plaatsvinden, dus blijf op de hoogte.
     </p>
 </section>
