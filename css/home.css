@@ -33,7 +33,7 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background: url('../img/achtergrond.png')no-repeat;
     background-position: center;
     background-size: cover;
@@ -45,6 +45,7 @@ section {
     min-width: 700px;
     border-radius: 20px 20px 20px 0;
     backdrop-filter: blur(30px);
+   
 }
 
 .content-table thead tr {
@@ -76,20 +77,7 @@ section {
     color: #009879;
 }
 
-button {
-    margin-left: 30%;
-    margin-top: 15%;
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009879;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    overflow: hidden;
-}
+
 
 #menu__toggle {
     opacity: 0;
@@ -218,9 +206,9 @@ button {
 
 .balance {
     z-index: 1;
-    position: fixed;
-    margin-bottom: 30%;
-    margin-right: 75%;
+    position: absolute;
+    margin-bottom: 600px;
+    
     padding: 10px;
     backdrop-filter: blur(20px);
     color: white;
@@ -238,8 +226,8 @@ button {
     border-radius: 20px;
     z-index: 1;
     position: absolute;
-    margin-left: 40%;
-    margin-bottom: 10%;
+    margin-left: 2%;
+    
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -268,10 +256,18 @@ button {
 }
 
 #verzendKnop {
-    background-color: transparent;
+    
+    margin-top: 10%;
     width: 30%;
-    padding: 2px;
-    backdrop-filter: blur(20px);
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009879;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 #overzicht{
@@ -280,8 +276,29 @@ button {
     overflow-x: hidden;
     border-radius: 20px;
     border: 2px solid white;
+    position: absolute;
+    display: block;
+    
 
 }
+
+#openPopup{
+    left: 10%;
+    margin-top: 30%;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009879;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+
 footer {
     background-color: #000;
     color: #fff;

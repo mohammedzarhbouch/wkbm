@@ -7,10 +7,23 @@ if (!isset($_SESSION['loggedin'])) {
     exit();
 }
 
+
+$gebruiker = "SELECT voornaam, achternaam FROM user where id = ?";
+$stmtGebruiker = $con->prepare($gebruiker);
+$userID = (int)$_SESSION["id"];
+
+$stmtGebruiker->bind_param("i", $userID);
+
+$stmtGebruiker->execute();
+$stmtGebruiker->bind_result($voornaam, $achternaam);
+$stmtGebruiker->fetch();
+$stmtGebruiker->close();
+
+
 $query = "SELECT balance FROM user_balance WHERE id = ?";
 $stmt = $con->prepare($query);
 
-$userID = (int)$_SESSION["id"];
+
 
 $stmt->bind_param("i", $userID);
 
@@ -44,7 +57,7 @@ $stmt->close();
 
         <div class="header">WKBM FINANCE</div>
 
-        <div class="gebruiker">Wadih Ibrahim</div>
+        <div class="gebruiker"> Welkom <?php echo $voornaam . ' ' . $achternaam ?></div>
 
             <div class="balance">Balans €<?php echo $balance  ?> </div>
 
@@ -73,6 +86,17 @@ $stmt->close();
                         <td>MyTicket</td>
                         <td>-555,67</td>
                     </tr>
+                    <tr>
+                        <td>14 feb</td>
+                        <td>MyTicket</td>
+                        <td>-555,67</td>
+                    </tr>
+                    <tr>
+                        <td>14 feb</td>
+                        <td>MyTicket</td>
+                        <td>-555,67</td>
+                    </tr>
+                    
                    
                     <!-- Additional rows can be added here -->
                 </tbody>
@@ -84,7 +108,7 @@ $stmt->close();
             <input id="bedragInput" type="number">
 
             <div id="rekeningNummer" >Rekening nummer</div>
-            <input id="rekeningNummerInput" type="text">
+            <input id="rekeningNummerInput" type="number">
             <button id="verzendKnop">Verzenden</button>
         </div>
         <button type="button" id="openPopup">Overboeken</button>

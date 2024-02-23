@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const verzendKnop = document.getElementById("openPopup");
     const popup = document.getElementById('popup');
+    const rekening = document.getElementById('overzicht');
 
     verzendKnop.addEventListener('click', () => {
         
@@ -13,12 +14,25 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 popup.style.opacity = '1';
             }, 0);
+
+            rekening.style.opacity = '0';
+            setTimeout(() => {
+                rekening.style.display = 'none';
+            }, 0);
         } else {
-            
+            console.log("Showing Rekening");
+            rekening.style.display = "block";
+            setTimeout(() => {
+                rekening.style.opacity = '1';
+            }, 0);
+
             popup.style.opacity = '0';
             setTimeout(() => {
                 popup.style.display = 'none';
-            }, 300);
+            }, 0);
         }
     });
+
+
+
 });
