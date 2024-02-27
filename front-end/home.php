@@ -28,7 +28,7 @@ $stmt = $con->prepare($query);
 $stmt->bind_param("i", $userID);
 
 $stmt->execute();
-$stmt->bind_result($balance);
+$stmt->bind_result($balans);
 $stmt->fetch();
 $stmt->close();
 
@@ -59,7 +59,7 @@ $stmt->close();
 
         <div class="gebruiker"> Welkom <?php echo $voornaam . ' ' . $achternaam ?></div>
 
-            <div class="balance">Balans €<?php echo $balance  ?> </div>
+            <div class="balance">Balans €<?php echo $balans  ?> </div>
 
         <div id="overzicht">
             <table class="content-table">
@@ -98,20 +98,24 @@ $stmt->close();
                     </tr>
                     
                    
-                    <!-- Additional rows can be added here -->
+                    
                 </tbody>
             </table>
         </div>
 
         <div id="popup">
+        <form action="../back-end/overboeken.php" method="post">
             <div id="bedrag"> Bedrag</div>
-            <input id="bedragInput" type="number">
+            <input id="bedragInput" name="bedrag" type="number">
 
             <div id="rekeningNummer" >Rekening nummer</div>
-            <input id="rekeningNummerInput" type="number">
-            <button id="verzendKnop">Verzenden</button>
+            <input id="rekeningNummerInput" name="rekeningnummer" type="number">
+
+            <button type="submit" value="submit" id="verzendKnop">Verzenden</button>
+        </form>
         </div>
-        <button type="button" id="openPopup">Overboeken</button>
+     
+        <button  type="button" id="openPopup">Overboeken</button>
 
 
 

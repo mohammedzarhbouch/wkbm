@@ -235,29 +235,29 @@ section {
     opacity: 1;
     transition: opacity 0.3s;
 }
-
-#bedrag {
+form{
+    display: flex;
+    flex-direction: column;
+}
+#bedrag,
+#rekeningNummer{
     color: white;
 }
 
-#bedragInput {
-    width: 30%;
-    text-align: center;
-}
-
-#rekeningNummer {
-    color: white;
-}
-
+#bedragInput,
 #rekeningNummerInput {
-    width: 30%;
+    width: 60%;
     text-align: center;
+    margin-bottom: 10px;
 }
+
+
+
 
 #verzendKnop {
     
     margin-top: 10%;
-    width: 30%;
+    width: 60%;
     padding: 15px 0;
     text-align: center;
     border-radius: 25px;
