@@ -61,7 +61,7 @@ $stmt->close();
 
             <div class="balance">Balans €<?php echo $balans  ?> </div>
 
-        <div id="overzicht">
+            <div id="overzicht">
             <table class="content-table">
                 <thead>
                     <tr>
@@ -71,34 +71,9 @@ $stmt->close();
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="active-row">
-                        <td>1 feb</td>
-                        <td>Jumbo</td>
-                        <td>-9,05</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td>5 feb</td>
-                        <td>AliBaba</td>
-                        <td>+230,99</td>
-                    </tr>
-                    <tr>
-                        <td>14 feb</td>
-                        <td>MyTicket</td>
-                        <td>-555,67</td>
-                    </tr>
-                    <tr>
-                        <td>14 feb</td>
-                        <td>MyTicket</td>
-                        <td>-555,67</td>
-                    </tr>
-                    <tr>
-                        <td>14 feb</td>
-                        <td>MyTicket</td>
-                        <td>-555,67</td>
-                    </tr>
-                    
-                   
-                    
+                    <?php
+                    include("../back-end/geschiedenis.php");
+                    ?>
                 </tbody>
             </table>
         </div>
