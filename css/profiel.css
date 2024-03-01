@@ -125,20 +125,18 @@ section {
     color: #fff;
     
 }
-form {
-    margin-right: 20%;
-    margin-top: 5%;
+form{
+    height: 200px;
+    /* width: 200px; */
 }
 .profile-picture {
     right: 17%;
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
+    width: 250px;
+    height: 200px;
+    border-radius: 100%;
     overflow: hidden;
     z-index:   1;
     cursor: pointer;
-    
-    
 }
   
 .profile-picture img {
@@ -158,8 +156,6 @@ form {
     cursor: pointer;
 }
 #textProfielFoto{
-    
-   
     right: 30%;
     color: white;
     z-index: 0;
